@@ -21,8 +21,14 @@ class LinkedList {
         head= insertBegin(head,50);
         head=insertEnd(head,60);
 
+
         print(head);
-        //rprint(head);
+        head=delhead(head);
+        System.out.println();
+        print(head);
+        head=delhead(head);
+        System.out.println();
+        print(head);
     }
 
 
@@ -59,9 +65,16 @@ class LinkedList {
             curr.next=temp;
             return head;
     }
-    public static void delhead(Node head){
-        if(head==null){
-
-        }
+    public static Node delhead(Node head){
+        if(head==null){return null ;}
+        else{return head.next;}
+    }
+    public static Node LastElement(Node head){
+        if(head==null){return null;}
+        if(head.next==null){return null;}
+        Node curr = head;
+        while(curr.next!=null){curr=curr.next;}
+        curr.next=null;
+        return head;
     }
 }
