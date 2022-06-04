@@ -77,4 +77,7 @@ class LinkedList {
         curr.next=null;
         return head;
     }
+    public static Node insertAtPos(Node head,int pos,int data){
+
+    }
 }
